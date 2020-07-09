@@ -42,3 +42,17 @@ if(playerInput == '1'){
 
 printMessage('Twój ruch to: ' + playerMove);
 
+&&
+
+warunek 1 && warunek 2
+
+|| 
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+
+    if(((computerMove == 'kamień' && playerMove == 'papier')
+
+     || (computerMove == 'nożyce' && playerMove == 'kamień')
+     
+     || ( computerMove == 'papier' && playerMove == 'nożyce'))){
+
