@@ -39,16 +39,16 @@ let playerMove = getMoveName(randomNumber);
 }
 printMessage('Twój ruch to: ' + playerMove);*/
 
-function displayResult( argComputerMove, argPlayerMove){
+function displayResult(argComputerMove, argPlayerMove){
 if (argPlayerMove == argComputerMove) {
-    return 'Nikt nie wygra';
+    printMessage('Nikt nie wygra');
 } else if ((argPlayerMove == 'kamień' && argComputerMove =='nożyce') ||
     (argPlayerMove == 'papier' && argComputerMove == 'kamień') ||
     (argPlayerMove == 'nożyce' && argComputerMove == 'papier')) {
-    return 'Ty wygrasz';
+    printMessage('Ty wygrasz');
 } if (argPlayerMove == 'nieznany ruch') {
-    return 'Zły ruch';
+    printMessage('Zły ruch');
 } else {
-    return 'Przegrana';
+    printMessage('Przegrana');
 }
 }
