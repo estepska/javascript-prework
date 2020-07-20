@@ -28,7 +28,7 @@ printMessage('Mój ruch to: ' + computerMove);*/
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = (computerMove);
+let playerMove = getMoveName(computerMove);
 
 /*if (playerInput == '1'){
     playerMove = 'kamień';
@@ -39,13 +39,20 @@ let playerMove = (computerMove);
 }
 printMessage('Twój ruch to: ' + playerMove);*/
 
-function displayResult(computerMove, playerMove){
-} if ((argPlayerMove == 'kamień' && argComputerMove =='nożyce') ||
-    (argPlayerMove == 'papier' && argComputerMove == 'kamień') ||
-    (argPlayerMove == 'nożyce' && argComputerMove == 'papier')) {
-    printMessage('Ty wygrasz');
-} else if (argPlayerMove == 'nieznany ruch') {
+function displayResult(argComputerMove, argPlayerMove){
+    if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+      printMessage('Ty wygrywasz!');
+      
+    } else if (
+    (argComputerMove == 'kamień' &&  argPlayerMove == 'nożyce') ||
+    (argComputerMove == 'nożyce' &&  argPlayerMove == 'papier') ||
+    (argComputerMove == 'papier' &&  argPlayerMove == 'kamień') ) {
+    printMessage('Wygra komputer');
+    } else (argPlayerMove == 'nieznany ruch') 
     printMessage('Zły ruch');
-} else {
-    printMessage('Przegrana');
-}
+
+    printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+    return 'Remis'
+    }
+
+
