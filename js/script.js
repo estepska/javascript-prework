@@ -15,6 +15,7 @@
 console.log('Wylosowana liczba to: ' + randomNumber);
 
 let computerMove = getMoveName(randomNumber);
+  printMessage ('Ruch komputera: ' + computerMove);
 
 /*if (randomNumber == 1) {
 computerMove = 'kamień';
@@ -28,7 +29,8 @@ printMessage('Mój ruch to: ' + computerMove);*/
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = getMoveName(randomNumber);
+let playerMove = getMoveName(playerInput);
+  printMessage ('Ruch gracza: ' +playerMove);
 
 /*if (playerInput == '1'){
     playerMove = 'kamień';
@@ -52,5 +54,5 @@ if((argPlayerMove == 'kamień' && argComputerMove == 'nożyce') ||
   
   }
 
-displayResult();
+displayResult(computerMove,playerMove);
  
